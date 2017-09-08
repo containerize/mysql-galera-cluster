@@ -7,5 +7,5 @@ COPY galera.list /etc/apt/sources.list.d/galera.list
 COPY galera.pref /etc/apt/preferences.d/galera.pref
  
 RUN apt-get update
-RUN apt-get remove mysql-common mysql-community-server
+RUN apt-get remove -y mysql-common mysql-community-server
 RUN apt-get install -y galera-3 galera-arbitrator-3 mysql-wsrep-5.7
